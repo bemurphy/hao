@@ -12,6 +12,12 @@ most.
 
 You have a system ruby installed.  This doesn't use anything beyond STDLIB
 
+## Conventions
+
+The Heroku apps are named like app-staging and app-production where app is equal to basename $PWD.
+
+`_` in the basename will translate to `-` in the appname as heroku does not permit underscores in names.
+
 ## Usage
 
 Given your are in a directory like `$HOME/code/foobar-app`
