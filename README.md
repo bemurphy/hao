@@ -20,7 +20,7 @@ The Heroku apps are named like app-staging and app-production where app is equal
 
 `_` in the basename will translate to `-` in the appname as Heroku does not permit underscores in names.
 
-## Installtion
+## Installation
 
 Copy `hao` into your local bin directory ($HOME/scripts, $HOME/bin, whatever).  chmod 755 it.
 
