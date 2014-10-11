@@ -12,6 +12,8 @@ most.
 
 You have a system ruby installed.  This doesn't use anything beyond STDLIB
 
+You have [Heroku Toolbelt](https://toolbelt.heroku.com/) installed and in your path
+
 ## Conventions
 
 The Heroku apps are named like app-staging and app-production where app is equal to basename $PWD.
