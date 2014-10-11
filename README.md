@@ -16,7 +16,7 @@ You have a system ruby installed.  This doesn't use anything beyond STDLIB
 
 The Heroku apps are named like app-staging and app-production where app is equal to basename $PWD.
 
-`_` in the basename will translate to `-` in the appname as heroku does not permit underscores in names.
+`_` in the basename will translate to `-` in the appname as Heroku does not permit underscores in names.
 
 ## Usage
 
