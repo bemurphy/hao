@@ -8,6 +8,10 @@ Just a little script to make opening addons for an app easier.  Currently
 only has shortcuts for papertrail and newrelic because that's what I use
 most.
 
+## Prerequisites
+
+You have a system ruby installed.  This doesn't use anything beyond STDLIB
+
 ## Usage
 
 Given your are in a directory like `$HOME/code/foobar-app`
