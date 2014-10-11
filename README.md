@@ -31,7 +31,7 @@ Given your are in a directory like `$HOME/code/foobar-app`
 Shortens this:
 
 ```shell
-$ heroku addons:open newlic --app foobar-app-production
+$ heroku addons:open newrelic --app foobar-app-production
 ```
 
 Into this:
