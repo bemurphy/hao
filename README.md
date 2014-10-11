@@ -20,6 +20,10 @@ The Heroku apps are named like app-staging and app-production where app is equal
 
 `_` in the basename will translate to `-` in the appname as Heroku does not permit underscores in names.
 
+## Installtion
+
+Copy `hao` into your local bin directory ($HOME/scripts, $HOME/bin, whatever).  chmod 755 it.
+
 ## Usage
 
 Given your are in a directory like `$HOME/code/foobar-app`
@@ -35,6 +39,8 @@ Into this:
 ```shell
 $ hao nr
 ```
+
+Since the environment was not provided, it assumed production.
 
 You can also use shortcuts to specific an alternate environment (usually staging):
 
