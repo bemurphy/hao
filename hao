@@ -1,0 +1,46 @@
+#!/usr/bin/env ruby
+
+require "pathname"
+require "shellwords"
+
+def expand_addon(name)
+  shortcuts = {
+    'nr' => 'newrelic',
+    'pt' => 'papertrail'
+  }
+
+  shortcuts.fetch(name, name)
+end
+
+def get_enironment(name)
+  shortcuts = {
+    'p' => 'production',
+    's' => 'staging'
+  }
+
+  shortcuts.fetch(name, 'production')
+end
+
+def expand_app_name(environment)
+  [Pathname.pwd.basename, environment].join('-').gsub('_', '-')
+end
+
+def escape(str)
+  Shellwords.shellescape(str)
+end
+
+addon       = expand_addon(ARGV.shift)
+environment = get_enironment(ARGV.shift)
+app_name    = expand_app_name(environment)
+
+if app_name && addon && environment
+  puts "Opening #{addon} for app #{app_name}..."
+  `heroku addons:open #{escape addon} --app #{escape app_name}`
+else
+  $stderr.puts "Need appname, addon, and environtment"
+  $stderr.puts "app_name    = #{app_name}"
+  $stderr.puts "addon       = #{addon}"
+  $stderr.puts "environment = #{environment}"
+
+  exit 1
+end
