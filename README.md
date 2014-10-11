@@ -52,6 +52,6 @@ $ hao pt s
 You can be explicit with the addon name:
 
 ```shell
-$ heroku addons:open papertrail --app foobar-app-staging
+$ heroku addons:open openredis --app foobar-app-production
 $ hao openredis
 ```
