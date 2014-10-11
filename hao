@@ -37,7 +37,7 @@ if app_name && addon && environment
   puts "Opening #{addon} for app #{app_name}..."
   `heroku addons:open #{escape addon} --app #{escape app_name}`
 else
-  $stderr.puts "Need appname, addon, and environtment"
+  $stderr.puts "Need appname, addon, and environment"
   $stderr.puts "app_name    = #{app_name}"
   $stderr.puts "addon       = #{addon}"
   $stderr.puts "environment = #{environment}"
